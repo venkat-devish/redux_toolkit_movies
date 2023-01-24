@@ -1,8 +1,7 @@
 import React from "react";
 import "./MovieCard.scss";
 
-const MovieCard = ({ key, data }) => {
-  console.log(data);
+const MovieCard = ({ data }) => {
   const { Poster, Title, Year } = data;
   return (
     <div className="card">
