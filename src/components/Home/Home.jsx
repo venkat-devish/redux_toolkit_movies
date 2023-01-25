@@ -9,6 +9,7 @@ import {
 
 const Home = () => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchAsyncMovies());
     dispatch(fetchAsyncShows());

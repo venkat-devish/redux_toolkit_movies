@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import {
   getAllMovies,
   getAllShows,
+  getSelectedMovieOrShow,
   isFetching,
 } from "../../features/movies/movieSlice";
 import MovieCard from "../MovieCard/MovieCard";
