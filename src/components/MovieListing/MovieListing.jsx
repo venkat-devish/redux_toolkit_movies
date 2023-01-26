@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import {
   getAllMovies,
   getAllShows,
+  getError,
   getSelectedMovieOrShow,
   isFetching,
 } from "../../features/movies/movieSlice";
@@ -12,6 +13,9 @@ import "./MovieListing.scss";
 const MovieListing = () => {
   const allMovies = useSelector(getAllMovies);
   const allShows = useSelector(getAllShows);
+  const movieError = useSelector(getError);
+
+  console.log(movieError);
 
   const renderedMovies =
     allMovies.Response === "True" ? (
@@ -35,7 +39,7 @@ const MovieListing = () => {
     <div className="movie__wrapper">
       <div className="movie__list">
         <h2>Movies</h2>
-        {!isFetching && <p>Loading...</p>}
+        {isFetching === "true" && <p>Loading...</p>}
         <div className="movie__container">{renderedMovies}</div>
       </div>
       <div className="show__list">

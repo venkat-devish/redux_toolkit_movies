@@ -7,11 +7,19 @@
 
   &__list {
     color: var(--font-primary);
+
+    h2 {
+      color: var(--font-secondary);
+    }
   }
 }
 
 .show {
   &__list {
     color: var(--font-primary);
+
+    h2 {
+      color: var(--font-secondary);
+    }
   }
 }
